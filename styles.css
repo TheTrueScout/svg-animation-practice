@@ -1,0 +1,225 @@
+html {
+  font-size: 16px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+:root {
+
+  --Bay-Leaf-Green: #71A894;
+  --Saffron-Mango-Orange: #F5C64F;
+  --Merino-Cream: #F3F0EA;
+
+  --Default-White: #FFFFFF;
+  --Thunder-Black: #303031;
+  --Ironside-Grey: #66645E;
+
+
+}
+
+@font-face { /* for the big headers */
+  font-family: 'Glory Sunshine';
+  src: url(fonts/Glory-Sunshine.woff2) format('woff2');
+}
+
+@font-face { /* for the logo text and a few others. ie, the h1 */
+  font-family: 'OPTIFuturaDemiBold';
+  src: url(fonts/OPTIFuturaDemiBold.otf) format('opentype');
+  font-weight: 400;
+}
+
+@font-face { /* for most text. ie, paragraphs, nav, etc */
+  font-family: 'HomepageBaukasten-Book';
+  src: url(fonts/HomepageBaukasten-Book.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'HomepageBaukasten-Bold';
+  src: url(fonts/HomepageBaukasten-Bold.ttf) format(truetype);
+}
+
+
+/* utility */
+.col-green {
+  color: var(--Bay-Leaf-Green);
+}
+
+.col-grey {
+  color: var(--Ironside-Grey);
+}
+
+.textalign-center {
+  text-align: center;
+}
+
+.box-shadow {
+  box-shadow: 0 0 1rem rgba(128, 128, 128, 0.397);
+}
+
+.h3--700 {
+  font-family: 'HomepageBaukasten-Bold';
+}
+
+.col-black {
+  color: var(--Thunder-Black);
+}
+
+
+/* main styles */
+.container {
+  padding: 2.5rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.green-button {
+  max-width: 17rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--Bay-Leaf-Green);
+
+  color: var(--Default-White);
+  font-family: 'HomepageBaukasten-Book', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.05rem;
+}
+
+/* typography */
+h1 {
+  font-family: 'OPTIFuturaDemiBold', sans-serif;
+  font-size: 2rem;
+  color: var(--Thunder-Black);
+}
+
+h2 {
+  font-family: 'Glory Sunshine', sans-serif;
+  font-size: 4rem;
+  color: var(--Thunder-Black);
+  line-height: 5rem;
+}
+
+h3 {
+  font-family: 'HomepageBaukasten-Book', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--Ironside-Grey);
+}
+
+h4 {
+  font-family: 'Glory Sunshine', sans-serif;
+  font-size: 3rem;
+  color: var(--Thunder-Black);
+}
+
+p {
+  font-family: 'HomepageBaukasten-Book', sans-serif;
+  font-size: 1.125rem;
+  color: var(--Thunder-Black);
+  line-height: 1.7rem;
+  letter-spacing: -0.05rem;
+}
+
+/* header */
+.container__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3.689rem;
+}
+
+.container__header__logo {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.container__header__nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.container__header__nav a{
+  font-family: 'HomepageBaukasten-Book', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.05rem;
+  text-decoration: none;
+  color: var(--Thunder-Black);
+}
+
+/* front page */
+.container__front-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12.375rem;
+}
+
+.container__front-page__left {
+  max-width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.container__front-page__left h3 {
+  margin-bottom: 2rem;
+}
+
+.container__front-page__right {
+  align-items: center;
+  position: relative;
+}
+
+.container__front-page__right img:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -7.5rem;
+  margin: auto 0;
+  max-width: 61.5rem;
+}
+
+/* block 2- Reimagining what it means to work */
+.container__block2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container__block2__header {
+  display: flex;
+  flex-direction: column;
+  max-width: 64rem;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.container__block2__content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+.container__block2__content__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 4rem 1rem;
+  width: calc(100% / 3 - 1rem);
+  border-radius: 0.5rem;
+}
